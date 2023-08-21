@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CreationTest from './Pages/CreationTest/CreationTest';
+import './App.scss';
+import Test from './Pages/Test/Test';
+import {Routes, Route} from 'react-router-dom';
+import Error from './Icons/Error/Error';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Routes>
+        <Route path='/' element={<Test/>}/>
+        <Route path='/create-test' element={<CreationTest/>}/>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
